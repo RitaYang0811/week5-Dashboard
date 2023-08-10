@@ -1,6 +1,8 @@
 .main {
   margin-left: 296px;
+  min-height: 100vh;
 }
+// modal內
 .verify-btn {
   width: 100%;
   height: 50px;
@@ -37,13 +39,62 @@
 }
 .modal-footer {
   .btn {
-    padding: 8px 32px;
     border-radius: 2px;
   }
 }
+
 .cancel-btn {
   &:hover {
     color: $success;
     background: $white;
   }
+}
+// header icon
+.cursor {
+  cursor: pointer;
+  &:hover {
+    color: $success;
+  }
+}
+// visibility Modal
+// .modal-content {
+//   flex-direction: row;
+// }
+
+.member-modal-content {
+  min-width: 480px;
+}
+.modal-pic {
+  width: 141px;
+  height: 141px;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true);
+  background-position: center;
+  background-size: cover;
+}
+// .modal-body {
+//   padding: 0px;
+// }
+.verifiedTag {
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.expand-less {
+  display: none;
+}
+.expand-more {
+  display: inline-block;
+}
+.collapsed .expand-more {
+  display: inline-block;
+}
+
+.collapsed .expand-less {
+  display: none;
+}
+.me-107 {
+  margin-right: 107px;
+}
+.me-163 {
+  margin-right: 163px;
 }

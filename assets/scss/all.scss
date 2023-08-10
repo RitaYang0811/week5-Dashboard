@@ -9,7 +9,6 @@
 // /* 接著引入客製化的scss檔案 */
 @import "./utilis/variables";
 @import "./utilis/utilities";
-@import "./utilis/color";
 /* 最後再引入全部bootstrap檔案 */
 @import "../../node_modules/bootstrap";
 /* 若沒有引入這個檔案，可能會造成bootstrap原本功能無法使用 */
