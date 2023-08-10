@@ -1,0 +1,53 @@
+.nav {
+  position: fixed;
+  min-width: 296px;
+  min-height: 100vh;
+}
+
+// logo
+.navbar-brand {
+  background: url(../assets/images/logo-ANSWER.svg);
+  width: 151px;
+  height: 40px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 32px;
+}
+//menu
+.nav-item {
+  position: relative;
+  &:hover {
+    background: $gray-200;
+  }
+  a {
+    display: block;
+    padding: 12px 32px;
+    &:active {
+      color: $success;
+    }
+    &:active::before {
+      content: "";
+      position: absolute;
+      height: 32px;
+      width: 4px;
+      left: 0px;
+      background: $success;
+    }
+  }
+}
+//member
+.member {
+  margin-left: 32px;
+}
+.memberPic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week5/andychen.jpeg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.text-gray600 {
+  color: $gray-600;
+}
