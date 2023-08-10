@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANSWER-Admin</title>
+    <script type="module" crossorigin src="/web-layout-training-vite/assets/index-72567683.js"></script>
+    <link rel="stylesheet" href="/web-layout-training-vite/assets/index-28dd2c0f.css">
+  </head>
+  <body>
+    <nav
+  class="nav flex-column bg-light align-items-start justify-content-between py-4"
+>
+  <div class="navbar flex-column py-0">
+    <a class="navbar-brand mb-4" href="#">ANSWER </a>
+    <ul class="list-unstyled">
+      <li class="nav-item list-unstyled">
+        <a class="text-dark d-flex align-items-center" href="#">
+          <span class="material-icons me-3"> assessment </span
+          ><span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item list-unstyled">
+        <a class="text-dark d-flex align-items-center" href="#"
+          ><span class="material-icons me-3"> question_answer </span
+          ><span>Question</span></a
+        >
+      </li>
+      <li class="nav-item list-unstyled">
+        <a class="text-dark d-flex align-items-center" href="#"
+          ><span class="material-icons me-3"> assignment </span
+          ><span>Assignment</span></a
+        >
+      </li>
+      <li class="nav-item list-unstyled">
+        <a class="text-dark d-flex align-items-center" href="#"
+          ><span class="material-icons me-3"> video_library </span
+          ><span>Course</span></a
+        >
+      </li>
+      <li class="nav-item list-unstyled">
+        <a class="text-dark d-flex align-items-center" href="index.html"
+          ><span class="material-icons me-3"> supervisor_account </span
+          ><span>Admin</span></a
+        >
+      </li>
+      <li class="nav-item list-unstyled">
+        <a class="text-dark d-flex align-items-center" href="#"
+          ><span class="material-icons me-3"> settings </span
+          ><span>Settings</span></a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="member d-flex align-items-center">
+    <div class="memberPic me-3"></div>
+    <div class="memberInfo">
+      <p class="text-dark fw-bold mb-1">Andy Chen</p>
+      <p class="text-gray600 mb-0 fz-sm">andy0401@mail.com</p>
+    </div>
+  </div>
+</nav>
+
+    <main class="main px-5">
+      <div
+        class="header d-flex align-items-center justify-content-between py-4"
+      >
+        <div class="d-flex align-items-center">
+          <h2 class="h4 fw-bold me-5">Admin</h2>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn link-success d-flex align-items-center link-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#addNewAdmin"
+          >
+            <span class="material-icons link-success me-2"> add </span>Add New
+            Admin
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="addNewAdmin"
+            tabindex="-1"
+            aria-labelledby="addNewAdminLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title fw-bold" id="exampleModalLabel">
+                    New Admin
+                  </h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="accountName pb-4 border-bottom">
+                      <h5 class="fw-bold">Account</h5>
+                      <label for="InputName1" class="form-label fz-sm mb-1"
+                        >Name</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control mb-3"
+                        id="InputName1"
+                        aria-describedby="inputname"
+                      />
+
+                      <label for="InputEmail1" class="form-label fz-sm mb-1"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="InputEmail1"
+                        aria-describedby="inputemail"
+                      />
+                    </div>
+                    <div class="verification pb-4 border-bottom">
+                      <h5 class="my-3 fw-bold">Verification</h5>
+                      <div class="d-flex align-items-center mb-3">
+                        <span class="material-icons text-danger me-2">
+                          warning </span
+                        ><span class="h6 fw-bold mb-0">Unverified</span>
+                      </div>
+                      <button
+                        type="button"
+                        class="verify-btn btn btn-outline-success bold"
+                      >
+                        Send Verification Mail
+                      </button>
+                    </div>
+                    <div class="access pb-4 border-bottom">
+                      <h5 class="my-3 fw-bold">Access Level</h5>
+                      <div class="dropdown">
+                        <button
+                          class="access-btn btn btn-outline-dark dropdown-toggle d-flex align-items-center justify-content-between"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          - Choose Access Level -
+                          <span class="material-icons"> expand_more </span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Level 1</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Level 2</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Level 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="customAccess">
+                      <h5 class="my-3 fw-bold">Custom Access</h5>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input border-dark border-2"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Lecture
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input border-dark border-2"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Coupon
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input border-dark border-2"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Message
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input border-dark border-2"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Setting
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input border-dark border-2"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Task Menu
+                        </label>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="cancel-btn btn btn-outline-success"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancel
+                      </button>
+                      <button type="button" class="add-btn btn btn-success">
+                        Add
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- header icon -->
+        <div class="header-icon">
+          <span class="material-icons me-4"> search </span
+          ><span class="material-icons"> notifications_active </span>
+        </div>
+      </div>
+      <!-- table -->
+      <table class="table pt-3 table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Verified</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#1</th>
+            <td>Emir Wicks</td>
+            <td>Emirwicks@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#2</th>
+            <td>Zaina Goldsmith</td>
+            <td>Zaina.goldsmith@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#3</th>
+            <td>Mahima Lopez</td>
+            <td>Mahima.lopez@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#4</th>
+            <td>Pharrell Murray</td>
+            <td>Pharrell.murray@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#5</th>
+            <td>Annika Mcbride</td>
+            <td>Annika.mcbride@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#6</th>
+            <td>Fatimah Clark</td>
+            <td>Fatimah.clark@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#7</th>
+            <td>Klaudia Rhodes</td>
+            <td>Klaudia.rhodes@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#8</th>
+            <td>Tillie Lucero</td>
+            <td>Tillie.luceros@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#9</th>
+            <td>Sabrina Stephenson</td>
+            <td>Sabrina.stephenson@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#10</th>
+            <td>Annie Smith</td>
+            <td>Annie.smith@gmail.com</td>
+            <td>YES</td>
+            <td class="text-end pe-0">
+              <span class="material-icons me-4"> visibility </span
+              ><span class="material-icons"> edit </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
