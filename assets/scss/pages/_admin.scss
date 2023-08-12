@@ -9,26 +9,12 @@
   border-color: $gray-400;
 }
 
-.access-btn {
-  width: 100%;
-  height: 50px;
-  border-color: $gray-900;
-  color: $gray-600;
-  text-align: left;
-  &:hover {
-    background: $white;
-    color: $gray-600;
-  }
-  &:active {
-    background: $white;
-    color: $gray-600;
-  }
-  &::after {
-    content: "";
-    border-top: 0;
-    position: absolute;
-  }
+//select下拉選單
+.form-select {
+  height: 51px;
 }
+
+// customAccess
 .customAccess {
   .form-check-input {
     border-radius: 0;
@@ -65,36 +51,27 @@
   min-width: 480px;
 }
 .modal-pic {
-  width: 141px;
+  min-width: 141px; //避免被flex影響而壓縮寬度
   height: 141px;
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true);
   background-position: center;
   background-size: cover;
 }
-// .modal-body {
-//   padding: 0px;
-// }
+
 .verifiedTag {
   padding: 4px 8px;
   border-radius: 8px;
 }
-
+// 控制折疊選單icon變換
 .expand-less {
-  display: none;
+  display: inline-block;
 }
 .expand-more {
-  display: inline-block;
+  display: none;
 }
 .collapsed .expand-more {
   display: inline-block;
 }
-
 .collapsed .expand-less {
   display: none;
-}
-.me-107 {
-  margin-right: 107px;
-}
-.me-163 {
-  margin-right: 163px;
 }
