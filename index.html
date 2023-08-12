@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ANSWER-Admin</title>
-    <script type="module" crossorigin src="/week5-Dashboard/assets/index-429124ee.js"></script>
-    <link rel="stylesheet" href="/week5-Dashboard/assets/index-791b5118.css">
+    <script type="module" crossorigin src="/week5-Dashboard/assets/index-d2385cb4.js"></script>
+    <link rel="stylesheet" href="/week5-Dashboard/assets/index-3fd980aa.css">
   </head>
   <body>
     <nav
@@ -16,39 +16,40 @@
   <div class="navbar flex-column py-0">
     <a class="navbar-brand mb-4" href="#">ANSWER </a>
     <!-- nev-item menu -->
+    <!-- a 移除text-dark 因為權重高，active也無法改變顏色 -->
     <ul class="list-unstyled">
       <li class="nav-item list-unstyled">
-        <a class="text-dark d-flex align-items-center" href="#">
+        <a class="d-flex align-items-center" href="#">
           <span class="material-icons me-3"> assessment </span
           ><span>Dashboard</span>
         </a>
       </li>
       <li class="nav-item list-unstyled">
-        <a class="text-dark d-flex align-items-center" href="#"
+        <a class="d-flex align-items-center" href="#"
           ><span class="material-icons me-3"> question_answer </span
           ><span>Question</span></a
         >
       </li>
       <li class="nav-item list-unstyled">
-        <a class="text-dark d-flex align-items-center" href="#"
+        <a class="d-flex align-items-center" href="#"
           ><span class="material-icons me-3"> assignment </span
           ><span>Assignment</span></a
         >
       </li>
       <li class="nav-item list-unstyled">
-        <a class="text-dark d-flex align-items-center" href="#"
+        <a class="d-flex align-items-center" href="#"
           ><span class="material-icons me-3"> video_library </span
           ><span>Course</span></a
         >
       </li>
       <li class="nav-item list-unstyled">
-        <a class="text-dark d-flex align-items-center" href="index.html"
+        <a class="d-flex align-items-center" href="index.html"
           ><span class="material-icons me-3"> supervisor_account </span
           ><span>Admin</span></a
         >
       </li>
       <li class="nav-item list-unstyled">
-        <a class="text-dark d-flex align-items-center" href="#"
+        <a class="d-flex align-items-center" href="#"
           ><span class="material-icons me-3"> settings </span
           ><span>Settings</span></a
         >
@@ -141,31 +142,20 @@
                           Send Verification Mail
                         </button>
                       </div>
+
                       <div class="access pb-4 border-bottom">
                         <h5 class="my-3 fw-bold">Access Level</h5>
-                        <div class="dropdown">
-                          <button
-                            class="access-btn btn btn-outline-dark dropdown-toggle d-flex align-items-center justify-content-between"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            - Choose Access Level -
-                            <span class="material-icons"> expand_more </span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a class="dropdown-item" href="#">Level 1</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">Level 2</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">Level 3</a>
-                            </li>
-                          </ul>
-                        </div>
+                        <select
+                          class="form-select text-gray600 border-dark"
+                          aria-label="Default select  example"
+                        >
+                          <option selected>- Choose Access Level -</option>
+                          <option value="1">Level One</option>
+                          <option value="2">Level Two</option>
+                          <option value="3">Level Three</option>
+                        </select>
                       </div>
+
                       <div class="customAccess">
                         <h5 class="my-3 fw-bold">Custom Access</h5>
                         <div class="form-check mb-3">
@@ -378,7 +368,8 @@
           <div class="modal-dialog">
             <div class="member-modal-content modal-content p-4 flex-row">
               <div class="modal-pic me-4"></div>
-              <div>
+              <!-- 撐開寬度以防壓縮 -->
+              <div class="flex-grow-1">
                 <div
                   class="modal-body d-flex justify-content-between align-items-start p-0"
                 >
@@ -395,13 +386,11 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div
-                  class="modal-footer d-flex justify-content-between p-0 border-0"
-                >
+                <div class="modal-footer p-0 border-0 justify-content-between">
                   <span class="verifiedTag bg-light mb-2">Verified</span>
                   <!-- 折疊選單 -->
                   <button
-                    class="btn link-success"
+                    class="btn link-success collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseExample"
